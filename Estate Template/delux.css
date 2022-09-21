@@ -1,0 +1,20 @@
+.appartment-scheme {
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.appartment-plan {
+    padding: 50px 40px;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: orange;
+    /* padding: 10px; */
+    width: 49%;
+}
+
+.appartment-map {
+    width: 49%;
+}

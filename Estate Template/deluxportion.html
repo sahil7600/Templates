@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    /* Set height of body and the document to 100% */
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial;
+      max-width: 1140px;
+      margin: auto;
+    }
+
+    /* Style tab links */
+    .tablink {
+    
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 0px;
+      font-size: 17px;
+      width: 20%;
+    
+    }
+
+    .tablink:hover {
+      /* background-color: #777; */
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+
+    #Home {
+      /* background-color: red; */
+    }
+
+    #News {
+      /* background-color: green; */
+    }
+
+    #Contact {
+      /* background-color: blue; */
+    }
+
+    #About {
+      /* background-color: orange; */
+    }
+
+    #Height {
+      /* background-color: purple; */
+    }
+
+    .ap-scheme{
+      display: flex;
+      /* flex-direction:column; */
+      width: 100%;
+      justify-content: space-between;
+    }
+    .ap1{
+      width: 49%;
+      background-color: orange;
+      color: white;
+    }
+    .ap2{
+      width: 49%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="tablink" onclick="openPage('Home', this)">The Studio</button>
+  <button class="tablink" onclick="openPage('News', this)" id="defaultOpen">Delux Portion</button>
+  <button class="tablink" onclick="openPage('Contact', this)">Pent House</button>
+  <button class="tablink" onclick="openPage('About', this,)">Top Garden</button>
+  <button class="tablink" onclick="openPage('Height', this)">height</button>
+
+  <div id="Home" class="tabcontent">
+    <div class="ap-scheme">
+      <div class="ap1">
+        <h1>Delux Portion</h1>
+      </div>
+      <div class="ap2">
+        <img src="appartmentscheme.png" alt="img" width="100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="News" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p>
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Get in touch, or swing by for a cup of coffee.</p>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+
+  <div id="Height" class="tabcontent">
+    <h3>height</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+
+</html>
